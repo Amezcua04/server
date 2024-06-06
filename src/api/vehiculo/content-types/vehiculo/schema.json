@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehiculos",
+  "info": {
+    "singularName": "vehiculo",
+    "pluralName": "vehiculos",
+    "displayName": "vehiculo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "string"
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Electricos",
+        "SUVs",
+        "Autos"
+      ]
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "year": {
+      "type": "string"
+    },
+    "modelo": {
+      "type": "string"
+    },
+    "transmision": {
+      "type": "string"
+    },
+    "colorExterior": {
+      "type": "string"
+    },
+    "colorInteriores": {
+      "type": "string"
+    },
+    "equipoAdicional": {
+      "type": "text"
+    },
+    "aceleracion": {
+      "type": "decimal"
+    },
+    "vMax": {
+      "type": "integer"
+    }
+  }
+}
