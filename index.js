@@ -25,7 +25,7 @@ const store = new sessionStore({
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: "Atenea07",
     resave: false,
     saveUninitialized: false,
     store: store,
