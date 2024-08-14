@@ -1,0 +1,115 @@
+//CREATE USER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Atenea",
+    "surname": "Amezcua",
+    "email": "admin@athenas.io",
+    "password": "/134Cq24",
+    "confirmPassword": "/134Cq24",
+    "role": "admin",
+    "status": 1
+}
+
+###
+// GET ALL USERS
+GET http://localhost:5000/users
+
+###
+// GET SINGLE USER
+GET http://localhost:5000/users/cad51321-6a22-4e3a-8450-49fa0fe93830
+
+###
+// UPDATE USER
+PATCH  http://localhost:5000/users/cad51321-6a22-4e3a-8450-49fa0fe93830
+Content-Type: application/json
+
+{
+    "role": "admin",
+    "status": 2
+}
+
+###
+// DELETE USER
+DELETE http://localhost:5000/users/dc2c1ce9-41a6-4741-8e1c-7c5baac7f1df
+
+###
+//LOGIN USER
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "soporte@athenas.io",
+    "password": "041196"
+}
+
+###
+//LOGIN USER
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@athenas.io",
+    "password": "/134Cq24"
+}
+
+###
+//SESSION USER
+GET http://localhost:5000/me
+
+###
+//LOGOUT USER
+DELETE http://localhost:5000/logout
+
+###
+// GET ALL PUBLICATIONS
+GET http://localhost:5000/publications
+
+###
+// GET SINGLE PUBLICATION
+GET http://localhost:5000/publications/0231fa32-21a5-4479-9d40-3c43a532956f
+
+###
+//CREATE PUBLICATION
+
+POST http://localhost:5000/publications
+Content-Type: application/json
+
+{
+    "title": "Tecnico Redes",
+    "description": "Se busca tecnico de redes jr, etc...",
+    "company": "Empresa",
+    "vacancyType": 5
+}
+
+###
+// UPDATE PUBLICATION
+PATCH http://localhost:5000/publications/a6382711-5fd7-41c7-aef2-bc6879c568be
+Content-Type: application/json
+
+{
+    "vacancyType": 3
+}
+
+###
+// DELETE PUBLICATION
+DELETE http://localhost:5000/publications/a6382711-5fd7-41c7-aef2-bc6879c568be
+
+###
+// GET ALL COMPANIES
+GET http://localhost:5000/companies
+
+###
+// GET SINGLE COMPANY
+GET http://localhost:5000/companies/
+
+###
+//CREATE COMPANY
+POST http://localhost:5000/companies
+Content-Type: application/json
+
+{
+    "name": "Nombre Compañia",
+    "userId": 1
+}
